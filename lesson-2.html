@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-var a = 1, b = 1, c, d;
+let a = 1, b = 1, c, d;
 c = ++a; alert(c + ', a=2, а так как инкрементирование произошло перед возвратом значения, в "c" вывелось тоже "2"'); 
 d = b++; alert(d + ', b=2, но поскольку инкрементирование прошло после возврата значения, в "d" вывелось "1"');    
 c = (2+ ++a); alert(c + ', т.к. с учётом прошлых изменений, "a" стало равно "3"');
@@ -15,21 +15,21 @@ alert(a + ', такое значение имеет переменная в ре
 alert(b  + ', такое значение имеет переменная в результате всех предыдущих манипуляций');
 </script>
 <script>
-var a = 2;
-var x = 1 + (a *= 2);
+let a = 2;
+let x = 1 + (a *= 2);
 alert(x  + ', x = 5, потому что запись "a *= 2" означает сокращенную форму записи "a=a*2", что присваивает переменной новое значение');
 </script>
 <script>
-let a = 5;
-let b = 2; 
-if (a>0 & b>0) {
-  alert (a-b);
+let a = 0;
+let b = -10; 
+if (a > 0 & b > 0) {
+  alert (a - b);
 }
-else if (a<0 & b<0) {
-  alert (a*b);
+else if (a < 0 & b < 0) {
+  alert (a * b);
 }
 else {
-  alert (a+b);
+  alert (+a + +b);
 }
 </script>
 <script>
@@ -74,25 +74,25 @@ switch(a){
 {
    return (x + y);
 }
-a = operation1(2, 4);
+let a = operation1(2, 4);
 alert(a);
 function operation2(x, y)
 {
    return (x - y);
 }
-b = operation2(2, 4);
+let b = operation2(2, 4);
 alert(b);
 function operation3(x, y)
 {
    return (x * y);
 }
-c = operation3(2, 4);
+let c = operation3(2, 4);
 alert(c);
 function operation4(x, y)
 {
    return (x / y);
 }
-d = operation4(2, 4);
+let d = operation4(2, 4);
 alert(d);
 </script>
 <script>
