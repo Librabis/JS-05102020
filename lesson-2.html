@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let a = 1, b = 1, c, d;
+c = ++a; alert(c + ', a=2, а так как инкрементирование произошло перед возвратом значения, в "c" вывелось тоже "2"'); 
+d = b++; alert(d + ', b=2, но поскольку инкрементирование прошло после возврата значения, в "d" вывелось "1"');    
+c = (2+ ++a); alert(c + ', т.к. с учётом прошлых изменений, "a" стало равно "3"');
+d = (2+ b++); alert(d + ', b=3, но возврат его значения произошёл до инкрементирования, поэтому при операции было использовано значение "b", присвоенное ранее');      
+alert(a + ', такое значение имеет переменная в результате всех предыдущих манипуляций');
+alert(b  + ', такое значение имеет переменная в результате всех предыдущих манипуляций');
+</script>
+<script>
+let a = 2;
+let x = 1 + (a *= 2);
+alert(x  + ', x = 5, потому что запись "a *= 2" означает сокращенную форму записи "a=a*2", что присваивает переменной новое значение');
+</script>
+<script>
+let a = 0;
+let b = -10; 
+if (a > 0 & b > 0) {
+  alert (a - b);
+}
+else if (a < 0 & b < 0) {
+  alert (a * b);
+}
+else {
+  alert (+a + +b);
+}
+</script>
+<script>
+let a = 6
+switch(a){
+   case 0:
+    alert('0');
+   case 1:
+    alert('1');
+   case 2:
+    alert('2');
+   case 3:
+    alert('3');
+   case 4:
+    alert('4');
+   case 5:
+    alert('5');
+   case 6:
+    alert('6');
+   case 7:
+    alert('7');
+   case 8:
+    alert('8');
+   case 9:
+    alert('9');
+   case 10:
+    alert('10');
+   case 11:
+    alert('11');
+   case 12:
+    alert('12');
+   case 13:
+    alert('13');
+   case 14:
+    alert('14');
+   case 15:
+    alert('15');
+}
+</script>
+<script>
+ function operation1(x, y)
+{
+   return (x + y);
+}
+let a = operation1(2, 4);
+alert(a);
+function operation2(x, y)
+{
+   return (x - y);
+}
+let b = operation2(2, 4);
+alert(b);
+function operation3(x, y)
+{
+   return (x * y);
+}
+let c = operation3(2, 4);
+alert(c);
+function operation4(x, y)
+{
+   return (x / y);
+}
+let d = operation4(2, 4);
+alert(d);
+</script>
+<script>
+function mathOperation(arg1, arg2, operation) {
+   switch (operation) {
+     case 'сложение':
+       return arg1 + arg2;
+       break;
+     case 'вычитание':
+       return arg1 - arg2;
+       break;
+     case 'деление':
+       return arg1 / arg2;
+       break;
+     case 'умножение':
+       return arg1 * arg2;
+       break;
+   }
+ }
+a = mathOperation(1, 3, 'сложение') 
+alert(a)
+</script>
+</body>
